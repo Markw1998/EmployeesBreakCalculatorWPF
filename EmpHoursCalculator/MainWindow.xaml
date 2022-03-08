@@ -1,8 +1,9 @@
-﻿<Window x:Class="EmpHoursCalculator.MainWindow"
+﻿<mah:MetroWindow x:Class="EmpHoursCalculator.MainWindow"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:mah="http://metro.mahapps.com/winfx/xaml/controls"
         xmlns:local="clr-namespace:EmpHoursCalculator"
         mc:Ignorable="d"
         Title="Break Calculator" Height="500" ResizeMode="NoResize" Width="320">
@@ -22,17 +23,17 @@
         </Grid.ColumnDefinitions>
 
         <Label >Employee Name</Label>
-        <TextBox VerticalAlignment="Center" Grid.Column="1" Width="140">MyText</TextBox>
+        <TextBox VerticalAlignment="Center" Grid.Column="1" Width="140"></TextBox>
 
         <Label Grid.Row="1">Hours Worked</Label>
-        <TextBox VerticalAlignment="Center" Grid.Row="1" Grid.Column="1" Width="140">MyText</TextBox>
+        <TextBox VerticalAlignment="Center" Grid.Row="1" Grid.Column="1" Width="140"></TextBox>
         
         <Label Grid.Row="2">Shift Type</Label>
-        <ComboBox VerticalAlignment="Center" Grid.Row="2" Grid.Column="1" Width="140">MyText</ComboBox>
+        <ComboBox VerticalAlignment="Center" Grid.Row="2" Grid.Column="1" Width="140"></ComboBox>
 
 
 
         <ListBox Grid.Row="4" Grid.ColumnSpan="2" x:Name="lstNames" />
 
     </Grid>
-</Window>
+</mah:MetroWindow>
