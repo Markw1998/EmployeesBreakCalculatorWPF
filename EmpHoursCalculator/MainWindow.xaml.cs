@@ -58,8 +58,6 @@ namespace EmpHoursCalculator
             shiftType = (int)empShiftTypeInput.SelectedValue;
 
 
-
-
             if (name != null && hours != null && shiftType != null)
             {
                 Employee dayEmp = new Employee(name, hours);
@@ -67,6 +65,8 @@ namespace EmpHoursCalculator
                 ListOfEmployees.Add(dayEmp);
 
             }
+
         }
+
     }
 }
