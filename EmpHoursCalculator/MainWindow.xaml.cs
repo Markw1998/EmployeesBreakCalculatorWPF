@@ -58,15 +58,51 @@ namespace EmpHoursCalculator
             shiftType = (int)empShiftTypeInput.SelectedValue;
 
 
-            if (name != null && hours != null && shiftType != null)
+            switch (shiftType)
             {
-                Employee dayEmp = new Employee(name, hours);
+                case 0:
+                    Employee dayEmp = new Employee(name, hours);
 
-                ListOfEmployees.Add(dayEmp);
+                    dayEmp.CalculateBreaks(hours);
 
+                    ListOfEmployees.Add(dayEmp);
+
+
+                    break;
+                case 1:
+                    Employee nightEmp = new NightShiftEmployee(name, hours);
+
+                    nightEmp.CalculateBreaks(hours);
+
+                    ListOfEmployees.Add(nightEmp);
+
+
+                    break;
+
+                case 2:
+
+                    Employee splitEmp = new SplitShiftEmployee(name, hours);
+
+                    splitEmp.CalculateBreaks(hours);
+
+                    ListOfEmployees.Add(splitEmp);
+
+                    break;
+
+                default:
+
+                    break;
             }
 
         }
 
+
+        private void ClearValues()
+        {
+            empNameInput.Clear();
+            empHoursInput.Clear();
+            empShiftTypeInput.SelectedIndex = -1;
+
+        }
     }
 }
