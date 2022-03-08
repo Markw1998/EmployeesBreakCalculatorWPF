@@ -23,17 +23,20 @@
         </Grid.ColumnDefinitions>
 
         <Label >Employee Name</Label>
-        <TextBox VerticalAlignment="Center" Grid.Column="1" Width="140"></TextBox>
+        <TextBox x:Name="empNameInput" VerticalAlignment="Center" Margin="5" Grid.Column="1" Width="140"></TextBox>
 
         <Label Grid.Row="1">Hours Worked</Label>
-        <TextBox VerticalAlignment="Center" Grid.Row="1" Grid.Column="1" Width="140"></TextBox>
+        <TextBox x:Name="empHoursInput" VerticalAlignment="Center" Margin="5" Grid.Row="1" Grid.Column="1" Width="140" PreviewTextInput="NumberValidationTextBox"></TextBox>
         
         <Label Grid.Row="2">Shift Type</Label>
-        <ComboBox VerticalAlignment="Center" Grid.Row="2" Grid.Column="1" Width="140"></ComboBox>
+        <ComboBox x:Name="empShiftTypeInput" VerticalAlignment="Center" Margin="5" Grid.Row="2" Grid.Column="1" Width="140"></ComboBox>
+
+        <Button Grid.Column="0" Grid.Row="3" VerticalAlignment="Center" Width="140">Calculate Breaks</Button>
+        <Button x:Name="btnAdd" Grid.Column="1" Grid.Row="3" VerticalAlignment="Center" Width="140" Click="btnAdd_Click">Add to list</Button>
 
 
-
-        <ListBox Grid.Row="4" Grid.ColumnSpan="2" x:Name="lstNames" />
+        <ListBox Grid.Row="4" Grid.ColumnSpan="2" x:Name="lstNames"/>
+        
 
     </Grid>
 </mah:MetroWindow>
