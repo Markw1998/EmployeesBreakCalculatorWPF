@@ -65,7 +65,7 @@ namespace EmpHoursCalculator
 
                     ListOfEmployees.Add(dayEmp);
 
-                    entitlementBox.Text = dayEmp.EmpBreakTime.ToString();
+                    entitlementBox.Text = dayEmp.EmpBreakTime.ToString() + " minutes";
 
                     ClearValues();
 
@@ -77,7 +77,7 @@ namespace EmpHoursCalculator
 
                     ListOfEmployees.Add(nightEmp);
 
-                    entitlementBox.Text = nightEmp.EmpBreakTime.ToString();
+                    entitlementBox.Text = nightEmp.EmpBreakTime.ToString() + " minutes";
 
                     ClearValues();
 
@@ -91,7 +91,7 @@ namespace EmpHoursCalculator
 
                     ListOfEmployees.Add(splitEmp);
 
-                    entitlementBox.Text = splitEmp.EmpBreakTime.ToString();
+                    entitlementBox.Text = splitEmp.EmpBreakTime.ToString() + " minutes";
 
                     ClearValues();
 
@@ -110,5 +110,9 @@ namespace EmpHoursCalculator
 
         }
 
+        private void clearList_Click(object sender, RoutedEventArgs e)
+        {
+            this.ListOfEmployees.Clear();
+        }
     }
 }

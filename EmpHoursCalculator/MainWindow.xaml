@@ -22,22 +22,23 @@
             <ColumnDefinition Width="*" />
         </Grid.ColumnDefinitions>
 
-        <Label >Employee Name</Label>
+        <Label FontWeight="Bold" >Employee Name:</Label>
         <TextBox x:Name="empNameInput" VerticalAlignment="Center" Margin="5" Grid.Column="1" Width="140"></TextBox>
 
-        <Label Grid.Row="1">Hours Worked</Label>
+        <Label FontWeight="Bold" Grid.Row="1">Hours Worked:</Label>
         <TextBox x:Name="empHoursInput" VerticalAlignment="Center" Margin="5" Grid.Row="1" Grid.Column="1" Width="140" PreviewTextInput="NumberValidationTextBox"></TextBox>
 
-        <Label Grid.Row="2">Shift Type</Label>
+        <Label FontWeight="Bold" Grid.Row="2">Shift Type:</Label>
         <ComboBox x:Name="empShiftTypeInput" VerticalAlignment="Center" Margin="5" Grid.Row="2" Grid.Column="1" Width="140"></ComboBox>
 
         <Button x:Name="calcButton" Grid.Column="0" Grid.Row="3" Margin="3" VerticalAlignment="Top" Width="300" Click="calcButton_Click" Grid.ColumnSpan="2">Calculate Break</Button>
-        <Label Grid.Column="0" Grid.Row="3" VerticalAlignment="Bottom">List of employees</Label>
 
-        <Label Grid.Column="0" Grid.Row="3" VerticalAlignment="Center">Break Entitlement:</Label>
+        <Label FontWeight="Bold" Grid.Column="0" Grid.Row="3" VerticalAlignment="Center">Break Entitlement:</Label>
         <TextBox x:Name="entitlementBox" VerticalAlignment="Center" Margin="5" Grid.Row="3" Grid.Column="1" Width="120" IsReadOnly="True"></TextBox>
 
 
+        <Label FontWeight="Bold" Grid.Column="0" Grid.Row="3" VerticalAlignment="Bottom">List of employees</Label>
+        <Button x:Name="clearList"  Grid.Column="1" Grid.Row="3" VerticalAlignment="Bottom" Width="150" Grid.ColumnSpan="2" Click="clearList_Click">Clear List</Button>
         <ListBox BorderBrush="Black" BorderThickness="1" Grid.Row="4" Grid.ColumnSpan="2" x:Name="lstNames"/>
 
 
