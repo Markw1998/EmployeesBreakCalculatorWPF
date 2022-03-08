@@ -29,6 +29,8 @@ namespace EmpHoursCalculator
 
             int additionalMinutes = numberOf * 20;
 
+            //Setting property to use to populate Break Entitlment Text Box
+            this.EmpBreakTime = breakTime + additionalMinutes;
 
             // Break out and return the value
             return breakTime + additionalMinutes;

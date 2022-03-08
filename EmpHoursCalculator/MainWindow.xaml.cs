@@ -38,16 +38,14 @@ namespace EmpHoursCalculator
             empShiftTypeInput.ItemsSource = Enum.GetValues(typeof(ShiftType)).Cast<ShiftType>();
         }
 
-
-
-
         private void NumberValidationTextBox(object sender, TextCompositionEventArgs e)
         {
             Regex regex = new Regex("[^0-9]+");
             e.Handled = regex.IsMatch(e.Text);
         }
 
-        private void btnAdd_Click(object sender, RoutedEventArgs e)
+
+        private void calcButton_Click(object sender, RoutedEventArgs e)
         {
             string name;
             int hours;
@@ -67,6 +65,9 @@ namespace EmpHoursCalculator
 
                     ListOfEmployees.Add(dayEmp);
 
+                    entitlementBox.Text = dayEmp.EmpBreakTime.ToString();
+
+                    ClearValues();
 
                     break;
                 case 1:
@@ -76,6 +77,9 @@ namespace EmpHoursCalculator
 
                     ListOfEmployees.Add(nightEmp);
 
+                    entitlementBox.Text = nightEmp.EmpBreakTime.ToString();
+
+                    ClearValues();
 
                     break;
 
@@ -87,16 +91,17 @@ namespace EmpHoursCalculator
 
                     ListOfEmployees.Add(splitEmp);
 
+                    entitlementBox.Text = splitEmp.EmpBreakTime.ToString();
+
+                    ClearValues();
+
                     break;
 
                 default:
-
+                    ClearValues();
                     break;
             }
-
         }
-
-
         private void ClearValues()
         {
             empNameInput.Clear();
@@ -104,5 +109,6 @@ namespace EmpHoursCalculator
             empShiftTypeInput.SelectedIndex = -1;
 
         }
+
     }
 }

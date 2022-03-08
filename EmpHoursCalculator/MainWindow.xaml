@@ -7,7 +7,7 @@
         xmlns:local="clr-namespace:EmpHoursCalculator"        
         mc:Ignorable="d"
         Title="Break Calculator" Height="500" ResizeMode="NoResize" Width="320" Visibility="Visible" >
-    <Grid Margin="5">
+    <Grid Margin="3">
 
         <Grid.RowDefinitions>
             <RowDefinition Height="Auto" />
@@ -31,9 +31,11 @@
         <Label Grid.Row="2">Shift Type</Label>
         <ComboBox x:Name="empShiftTypeInput" VerticalAlignment="Center" Margin="5" Grid.Row="2" Grid.Column="1" Width="140"></ComboBox>
 
-        <Button Grid.Column="0" Grid.Row="3" VerticalAlignment="Center" Width="140">Calculate Breaks</Button>
+        <Button x:Name="calcButton" Grid.Column="0" Grid.Row="3" Margin="3" VerticalAlignment="Top" Width="300" Click="calcButton_Click" Grid.ColumnSpan="2">Calculate Break</Button>
         <Label Grid.Column="0" Grid.Row="3" VerticalAlignment="Bottom">List of employees</Label>
-        <Button x:Name="btnAdd" Grid.Column="1" Grid.Row="3" VerticalAlignment="Center" Width="140" Click="btnAdd_Click">Add to list</Button>
+
+        <Label Grid.Column="0" Grid.Row="3" VerticalAlignment="Center">Break Entitlement:</Label>
+        <TextBox x:Name="entitlementBox" VerticalAlignment="Center" Margin="5" Grid.Row="3" Grid.Column="1" Width="120" IsReadOnly="True"></TextBox>
 
 
         <ListBox BorderBrush="Black" BorderThickness="1" Grid.Row="4" Grid.ColumnSpan="2" x:Name="lstNames"/>
