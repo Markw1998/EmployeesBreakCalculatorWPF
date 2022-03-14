@@ -13,6 +13,7 @@
             <RowDefinition Height="Auto" />
             <RowDefinition Height="Auto" />
             <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
             <RowDefinition Height="1*" />
             <RowDefinition Height="1*" />
         </Grid.RowDefinitions>
@@ -29,17 +30,18 @@
         <TextBox x:Name="empHoursInput" VerticalAlignment="Center" Margin="5" Grid.Row="1" Grid.Column="1" Width="140" PreviewTextInput="NumberValidationTextBox"></TextBox>
 
         <Label FontWeight="Bold" Grid.Row="2">Shift Type:</Label>
-        <ComboBox x:Name="empShiftTypeInput" VerticalAlignment="Center" Margin="5" Grid.Row="2" Grid.Column="1" Width="140"></ComboBox>
-
-        <Button x:Name="calcButton" Grid.Column="0" Grid.Row="3" Margin="3" VerticalAlignment="Top" Width="300" Click="calcButton_Click" Grid.ColumnSpan="2">Calculate Break</Button>
+        <ComboBox x:Name="empShiftTypeInput" VerticalAlignment="Center" Margin="5" Grid.Row="2" Grid.Column="1" Width="140" ></ComboBox>
 
         <Label FontWeight="Bold" Grid.Column="0" Grid.Row="3" VerticalAlignment="Center">Break Entitlement:</Label>
-        <TextBox x:Name="entitlementBox" VerticalAlignment="Center" Margin="5" Grid.Row="3" Grid.Column="1" Width="120" IsReadOnly="True"></TextBox>
+        <TextBox x:Name="entitlementBox" VerticalAlignment="Center" Margin="5" Grid.Row="3" Grid.Column="1" Width="140" IsReadOnly="True"></TextBox>
+        
+        <Button x:Name="calcButton" Grid.Column="0" Grid.Row="4" Margin="3" VerticalAlignment="Top" Width="300" Click="calcButton_Click" Grid.ColumnSpan="2">Calculate Break</Button>
 
 
-        <Label FontWeight="Bold" Grid.Column="0" Grid.Row="3" VerticalAlignment="Bottom">List of employees</Label>
-        <Button x:Name="clearList"  Grid.Column="1" Grid.Row="3" VerticalAlignment="Bottom" Width="150" Grid.ColumnSpan="2" Click="clearList_Click">Clear List</Button>
-        <ListBox BorderBrush="Black" BorderThickness="1" Grid.Row="4" Grid.ColumnSpan="2" x:Name="lstNames"/>
+
+        <Label FontWeight="Bold" Grid.Column="0" Grid.Row="4" VerticalAlignment="Bottom">List of employees</Label>
+        <Button x:Name="clearList"  Grid.Column="1" Grid.Row="4" VerticalAlignment="Bottom" Width="150" Grid.ColumnSpan="2" Click="clearList_Click">Clear List</Button>
+        <ListBox BorderBrush="Black" BorderThickness="1" Grid.Row="5" Grid.ColumnSpan="2" x:Name="lstNames"/>
 
 
     </Grid>
